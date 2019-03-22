@@ -1,3 +1,5 @@
 # Psychic-Game
 
-As a homework assignment, I made this simple letter guessing game in Javascript. Essentially, the computer selects a random letter from an array, and the user has 9 guesses to try and guess the letter that the computer selected. If the user wins, their wins total goes up by one, and if they lose, their loss total goes up by one. While the game is going on, the guess counter goes down by 1 for every wrong guess, and the user's guesses get stored in an array that is visible on screen.
+For this homework assignment, our challenge was to create a game in JavaScript where the computer would pick a letter and the player would have nine chances to correctly guess it. To create the game, I created an array of letters and wrote a function that would cause the computer to randomly select one by generating a random number and using that as the index of the chosen letter. Then, I created if/else statements to decide the outcome for all possible scenarios. 
+
+Check it out in action here: https://sam-reinhard.github.io/Psychic-Game/
