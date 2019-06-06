@@ -1,8 +1,20 @@
-h1, h2, h3, p {
+h1, h2, h4, p {
     text-align: center;
 }
 
+h1 {
+    padding-top: 30px;
+}
+
+h2 {
+    padding: 10px;
+}
+
 .row {
+    padding: 20px;
+}
+
+.inner {
     padding: 20px;
 }
 

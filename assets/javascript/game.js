@@ -9,19 +9,10 @@ var computerChoices = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l
 // Function that makes the computer select a random letter
 function computerSelected() {
     computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-    console.log(computerGuess);
 }
 
-
-// Run the function that makes the computer pick something
-computerSelected();
-
-// User releases a key to start guessing
-document.onkeyup = function(event){
-    var userGuess = event.key;
-
 // Let's compare the user guess with the computer guess and decide the outcomes for possible scenarios
-    
+function outcomes(userGuess){
     if (userGuess === computerGuess){
         wins++;
         userGuesses = [];
@@ -38,6 +29,21 @@ document.onkeyup = function(event){
         userGuesses = [];
         guessesLeft = 9;
         computerSelected();
+    }
+}
+
+// Run the function that makes the computer pick something
+computerSelected();
+
+// User releases a key to start guessing
+document.onkeyup = function(event){
+    var userGuess = event.key;
+
+    // Validation to make sure that a guess only counts if it's a letter
+    for (i = 0; i < computerChoices.length; i++){
+        if (userGuess === computerChoices[i]){
+            outcomes(userGuess);
+        }
     }
 
    // Code to put wins, losses, guesses remaining, and the user guesses on the page 
