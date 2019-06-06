@@ -12,6 +12,7 @@ function computerSelected() {
     console.log(computerGuess);
 }
 
+
 // Run the function that makes the computer pick something
 computerSelected();
 
@@ -43,7 +44,7 @@ document.onkeyup = function(event){
     document.getElementById('wins').textContent = wins;
     document.getElementById('losses').textContent = losses;
     document.getElementById('remaining').textContent = guessesLeft;
-    document.getElementById('guesses').textContent = " " + userGuesses; 
+    document.getElementById('guesses').textContent = userGuesses.join(", "); 
 }
 
 
