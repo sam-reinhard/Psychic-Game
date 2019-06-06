@@ -39,9 +39,9 @@ computerSelected();
 document.onkeyup = function(event){
     var userGuess = event.key;
 
-    // Validation to make sure that a guess only counts if it's a letter
+    // Validation to make sure that a guess only counts if it's a letter that hasn't been guessed
     for (i = 0; i < computerChoices.length; i++){
-        if (userGuess === computerChoices[i]){
+        if (userGuess === computerChoices[i] && userGuesses.includes(userGuess) === false){
             outcomes(userGuess);
         }
     }
